@@ -1,0 +1,8 @@
+server:
+  port: 8123
+#  servlet:
+#    context-path: /api
+#tao:
+#  client:
+#    access-key: tao
+#    secret-key: abcdefgh
