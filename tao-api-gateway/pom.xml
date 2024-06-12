@@ -15,13 +15,13 @@
     <description>服务网关</description>
 
     <dependencies>
-        <!--NeroApi SDK-->
+        <!--TaoApi SDK-->
         <dependency>
             <groupId>com.taoshao</groupId>
             <artifactId>taoapi-client-sdk</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--NeroApi common-->
+        <!--TaoApi common-->
         <dependency>
             <groupId>com.taoshao</groupId>
             <artifactId>tao-api-common</artifactId>

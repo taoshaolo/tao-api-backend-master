@@ -1,5 +1,6 @@
 package com.taoshao.taoclientsdk;
 
+import com.taoshao.taoclientsdk.client.TaoApiClient;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -7,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Nero API 客户端配置类
+ * taoshao API 客户端配置类
  * @author taoshao
 
  */
@@ -27,7 +28,7 @@ public class TaoApiClientConfig {
      * @return
      */
     @Bean
-    public com.taoshao.taoclientsdk.client.TaoApiClient getApiClient() {
-        return new com.taoshao.taoclientsdk.client.TaoApiClient(accessKey, secretKey);
+    public TaoApiClient getApiClient() {
+        return new TaoApiClient(accessKey, secretKey);
     }
 }

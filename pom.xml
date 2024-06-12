@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- @author <a href="https://github.com/liyupi">程序员鱼皮</a> -->
-<!-- @from <a href="https://yupi.icu">编程导航知识星球</a> -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -9,7 +8,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>tao-api-admin</module>
+        <module>tao-api-service</module>
         <module>tao-api-gateway</module>
         <module>tao-api-interface</module>
         <module>tao-api-common</module>
@@ -24,7 +23,6 @@
     <groupId>com.taoshao</groupId>
     <artifactId>tao-api-backend</artifactId>
     <version>0.0.1</version>
-
     <name>tao-api-backend</name>
 
     <properties>
@@ -64,7 +62,7 @@
             <!--后台管理模块-->
             <dependency>
                 <groupId>com.taoshao</groupId>
-                <artifactId>tao-api-admin</artifactId>
+                <artifactId>tao-api-service</artifactId>
                 <version>${tao-api.version}</version>
             </dependency>
             <!--网关模块-->

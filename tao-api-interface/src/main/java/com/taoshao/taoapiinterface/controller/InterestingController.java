@@ -4,6 +4,7 @@ import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,7 +39,7 @@ public class InterestingController {
         return httpResponse.body();
     }
 
-    @PostMapping("/api/ipInfo")
+    @GetMapping("/api/ipInfo")
     public String getIpInfo(HttpServletRequest request) {
         String url = "https://api.vvhan.com/api/ipInfo";
         String body = URLUtil.decode(request.getHeader("body"), CharsetUtil.CHARSET_UTF_8);
@@ -56,9 +57,19 @@ public class InterestingController {
         return httpResponse.body();
     }
 
-    @PostMapping("/hotList/douYinHot")
+    @PostMapping("/api/hotlist/douyinHot")
     public String getDouYinHotList(HttpServletRequest request) {
         String url = "https://api.vvhan.com/api/hotlist/douyinHot";
+        String body = URLUtil.decode(request.getHeader("body"), CharsetUtil.CHARSET_UTF_8);
+        HttpResponse httpResponse = HttpRequest.get(url + "?" + body)
+                .execute();
+        return httpResponse.body();
+    }
+
+
+    @PostMapping("/getfav/api.php")
+    public String getFavicon(HttpServletRequest request) {
+        String url = "https://api.btstu.cn/getfav/api.php";
         String body = URLUtil.decode(request.getHeader("body"), CharsetUtil.CHARSET_UTF_8);
         HttpResponse httpResponse = HttpRequest.get(url + "?" + body)
                 .execute();

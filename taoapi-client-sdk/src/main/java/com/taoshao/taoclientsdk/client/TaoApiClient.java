@@ -35,19 +35,19 @@ public class TaoApiClient {
     }
 
 
-    private Map<String, String> getHeaderMap(String body, String method) throws UnsupportedEncodingException {
+    private Map<String, String> getHeaderMap(String body, String method){
         HashMap<String, String> map = new HashMap<>();
         map.put("accessKey", accessKey);
         map.put("nonce", RandomUtil.randomNumbers(10));
         map.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
         map.put("sign", genSign(body, secretKey));
-        body = URLUtil.encode(body, CharsetUtil.CHARSET_UTF_8);
+        body = URLUtil.encode(body, CharsetUtil.CHARSET_UTF_8);//中文防乱码
         map.put("body", body);
         map.put("method", method);
         return map;
     }
 
-    public String invokeInterface(String params, String url, String method) throws UnsupportedEncodingException {
+    public String invokeInterface(String params, String url, String method)  {
         HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + url)
                 .header("Accept-Charset", CharsetUtil.UTF_8)
                 .addHeaders(getHeaderMap(params, method))

@@ -14,13 +14,13 @@
     <description>接口模块</description>
 
     <dependencies>
-        <!--NeroApi SDK-->
+        <!--TaoApi SDK-->
         <dependency>
             <groupId>com.taoshao</groupId>
             <artifactId>taoapi-client-sdk</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--NeroApi Common-->
+        <!--TaoApi Common-->
         <dependency>
             <groupId>com.taoshao</groupId>
             <artifactId>tao-api-common</artifactId>
@@ -39,6 +39,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
         <!-- Spring Boot Test-->

@@ -22,7 +22,7 @@ logging:
           gateway: trace
 dubbo:
   application:
-    name: tao-api-admin-consumer
+    name: tao-api-service-consumer
   protocol:
     name: dubbo
     port: -1

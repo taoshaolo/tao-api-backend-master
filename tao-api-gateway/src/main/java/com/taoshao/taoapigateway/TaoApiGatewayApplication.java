@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
         DataSourceTransactionManagerAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class})
 @EnableDubbo
-@Service
 public class TaoApiGatewayApplication {
 
     public static void main(String[] args) {
